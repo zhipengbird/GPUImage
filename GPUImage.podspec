@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     
     s.subspec 'Basic' do |bs|
         bs.dependency 'GPUImage/GL'
-        bs.public_header_files = 'GPUImage/Classes/Basic/**/*.h'
+        bs.public_header_files = 'GPUImage/Classes/Core/Basic/**/*.{h}'
         bs.source_files = 'GPUImage/Classes/Core/Basic/**/*.{m,h}'
     end
     
