@@ -1,11 +1,9 @@
 use_frameworks!
 
 target 'GPUImage_Example' do
-  pod 'GPUImage', :path => '../'
+  pod 'GPUImage/Basic', :path => '../'
 
   target 'GPUImage_Tests' do
     inherit! :search_paths
-
-    
   end
 end

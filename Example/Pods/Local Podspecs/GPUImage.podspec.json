@@ -1,0 +1,38 @@
+{
+  "name": "GPUImage",
+  "version": "0.1.0",
+  "summary": "A short description of GPUImage.",
+  "requires_arc": true,
+  "homepage": "http://www.ushareit.com",
+  "description": "TODO: Add long description of the pod here.",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhipengbird": "yuanph@ushareit.com"
+  },
+  "source": {
+    "git": "https://github.com/zhipengbird/GPUImage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "default_subspecs": "GL",
+  "subspecs": [
+    {
+      "name": "GL",
+      "source_files": "GPUImage/Classes/Core/GL/*.{m,h}"
+    },
+    {
+      "name": "Basic",
+      "dependencies": {
+        "GPUImage/GL": [
+
+        ]
+      },
+      "source_files": "GPUImage/Classes/Core/Basic/**/*.{m,h}"
+    }
+  ]
+}
