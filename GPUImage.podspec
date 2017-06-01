@@ -72,10 +72,10 @@ Pod::Spec.new do |s|
         ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
         ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
     end
-    s.subspec 'Image' do |ef|
-        ef.dependency 'GPUImage/FilterCore'
-        ef.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
-        ef.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
+    s.subspec 'Image' do |im|
+        im.dependency 'GPUImage/FilterCore'
+        im.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
+        im.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
     end
     
     
