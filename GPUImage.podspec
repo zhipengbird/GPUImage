@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-   s.name             = 'GPUImage'
+    s.name             = 'GPUImage'
     s.version          = '0.2.2 '
     s.summary          = 'A short description of GPUImage.'
     s.requires_arc = true
@@ -32,15 +32,15 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '7.0'
     s.frameworks = ['OpenGLES', 'CoreMedia', 'QuartzCore', 'AVFoundation']
-
+    
     s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
-
+    
     s.default_subspec = 'GL'
     
     s.subspec 'GL' do |cs|
         cs.source_files = 'GPUImage/Classes/Core/GL/*.{m,h}'
-        cs.public_header_files = 'GPUImage/Classes/GL/GLProgram.h'
-
+        cs.public_header_files = 'GPUImage/Classes/Core/GL/GLProgram.h'
+        
     end
     
     s.subspec 'Basic' do |bs|
@@ -49,12 +49,42 @@ Pod::Spec.new do |s|
         bs.source_files = 'GPUImage/Classes/Core/Basic/**/*.{m,h}'
     end
     
+    s.subspec 'FilterCore' do |fc|
+        fc.dependency 'GPUImage/Basic'
+        fc.public_header_files = 'GPUImage/Classes/Filter/Core/**/*.{h}'
+        fc.source_files = 'GPUImage/Classes/Filter/Core/*.{m,h}'
+    end
     
-  # s.resource_bundles = {
-  #   'GPUImage' => ['GPUImage/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.subspec 'Blend' do |bl|
+        bl.dependency 'GPUImage/FilterCore'
+        bl.public_header_files = 'GPUImage/Classes/Filter/Blends/**/*.{h}'
+        bl.source_files = 'GPUImage/Classes/Filter/Blends/*.{m,h}'
+    end
+    
+    s.subspec 'Color' do |co|
+        co.dependency 'GPUImage/Basic'
+        co.public_header_files = 'GPUImage/Classes/Filter/Colors/**/*.{h}'
+        co.source_files = 'GPUImage/Classes/Filter/Colors/*.{m,h}'
+    end
+    
+    s.subspec 'Effect' do |ef|
+        ef.dependency 'GPUImage/Basic'
+        ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
+        ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
+    end
+    s.subspec 'Image' do |ef|
+        ef.dependency 'GPUImage/Basic'
+        ef.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
+        ef.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
+    end
+    
+    
+    
+    # s.resource_bundles = {
+    #   'GPUImage' => ['GPUImage/Assets/*.png']
+    # }
+    
+    # s.public_header_files = 'Pod/Classes/**/*.h'
+    # s.frameworks = 'UIKit', 'MapKit'
+    # s.dependency 'AFNetworking', '~> 2.3'
 end
