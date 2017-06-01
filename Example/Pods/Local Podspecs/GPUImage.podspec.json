@@ -19,11 +19,21 @@
   "platforms": {
     "ios": "7.0"
   },
+  "frameworks": [
+    "OpenGLES",
+    "CoreMedia",
+    "QuartzCore",
+    "AVFoundation"
+  ],
+  "xcconfig": {
+    "CLANG_MODULES_AUTOLINK": "YES"
+  },
   "default_subspecs": "GL",
   "subspecs": [
     {
       "name": "GL",
-      "source_files": "GPUImage/Classes/Core/GL/*.{m,h}"
+      "source_files": "GPUImage/Classes/Core/GL/*.{m,h}",
+      "public_header_files": "GPUImage/Classes/GL/*.h"
     },
     {
       "name": "Basic",
@@ -32,6 +42,7 @@
 
         ]
       },
+      "public_header_files": "GPUImage/Classes/Basic/**/*.h",
       "source_files": "GPUImage/Classes/Core/Basic/**/*.{m,h}"
     }
   ]

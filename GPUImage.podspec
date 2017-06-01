@@ -31,19 +31,25 @@ Pod::Spec.new do |s|
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '7.0'
-    
-    
+    s.frameworks = ['OpenGLES', 'CoreMedia', 'QuartzCore', 'AVFoundation']
+
+    s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
+
     s.default_subspec = 'GL'
     
     s.subspec 'GL' do |cs|
         cs.source_files = 'GPUImage/Classes/Core/GL/*.{m,h}'
+        cs.public_header_files = 'GPUImage/Classes/GL/*.h'
+
     end
     
     s.subspec 'Basic' do |bs|
         bs.dependency 'GPUImage/GL'
+        bs.public_header_files = 'GPUImage/Classes/Basic/**/*.h'
         bs.source_files = 'GPUImage/Classes/Core/Basic/**/*.{m,h}'
     end
-  
+    
+    
   # s.resource_bundles = {
   #   'GPUImage' => ['GPUImage/Assets/*.png']
   # }

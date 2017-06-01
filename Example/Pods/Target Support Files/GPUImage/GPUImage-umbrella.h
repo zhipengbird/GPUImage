@@ -11,6 +11,7 @@
 #endif
 
 #import "GPUImageContext.h"
+#import "GPUImageFilter.h"
 #import "GPUImageFramebuffer.h"
 #import "GPUImageFramebufferCache.h"
 #import "GPUImageMovieWriter.h"
