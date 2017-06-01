@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Filter' do |bl|
-#        bl.dependency 'GPUImage/Basic'
+        bl.dependency 'GPUImage/Basic'
 #Core,Blends,Colors,Effects,Images
         bl.public_header_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{h}'
         bl.source_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{m,h}'
