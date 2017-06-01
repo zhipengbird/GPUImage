@@ -49,35 +49,35 @@ Pod::Spec.new do |s|
         bs.source_files = 'GPUImage/Classes/Core/Basic/**/*.{m,h}'
     end
     
-    s.subspec 'FilterCore' do |fc|
-        fc.dependency 'GPUImage/Basic'
-        fc.public_header_files = 'GPUImage/Classes/Filter/Core/**/*.{h}'
-        fc.source_files = 'GPUImage/Classes/Filter/Core/*.{m,h}'
+    s.subspec 'Filter' do |bl|
+        bl.dependency 'GPUImage/Basic'
+        bl.public_header_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/**/*.{h}'
+        bl.source_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{m,h}'
     end
     
-    s.subspec 'Blend' do |bl|
-        bl.dependency 'GPUImage/FilterCore'
-        bl.public_header_files = 'GPUImage/Classes/Filter/Blends/**/*.{h}'
-        bl.source_files = 'GPUImage/Classes/Filter/Blends/*.{m,h}'
-    end
-    
-    s.subspec 'Color' do |co|
-        co.dependency 'GPUImage/FilterCore'
-        co.public_header_files = 'GPUImage/Classes/Filter/Colors/**/*.{h}'
-        co.source_files = 'GPUImage/Classes/Filter/Colors/*.{m,h}'
-    end
-    
-    s.subspec 'Effect' do |ef|
-        ef.dependency 'GPUImage/FilterCore'
-        ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
-        ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
-    end
-    s.subspec 'Image' do |im|
-        im.dependency 'GPUImage/FilterCore'
-        im.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
-        im.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
-    end
-    
+#    s.subspec 'Color' do |co|
+#        co.dependency 'GPUImage/FilterCore'
+#        co.dependency 'GPUImage/Image'
+#
+#        co.public_header_files = 'GPUImage/Classes/Filter/Colors/**/*.{h}'
+#        co.source_files = 'GPUImage/Classes/Filter/Colors/*.{m,h}'
+#    end
+#    
+#    s.subspec 'Effect' do |ef|
+#        ef.dependency 'GPUImage/FilterCore'
+#        ef.dependency 'GPUImage/Image'
+#
+#        ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
+#        ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
+#    end
+#    s.subspec 'Image' do |im|
+#        im.dependency 'GPUImage/FilterCore'
+##        im.dependency 'GPUImage/Color'
+##        im.dependency 'GPUImage/Blends'
+#        im.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
+#        im.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
+#    end
+
     
     
     # s.resource_bundles = {
