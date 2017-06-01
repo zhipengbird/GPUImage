@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
    s.name             = 'GPUImage'
-    s.version          = '0.2.0'
+    s.version          = '0.2.2 '
     s.summary          = 'A short description of GPUImage.'
     s.requires_arc = true
     
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
     
     s.subspec 'GL' do |cs|
         cs.source_files = 'GPUImage/Classes/Core/GL/*.{m,h}'
-        cs.public_header_files = 'GPUImage/Classes/GL/*.h'
+        cs.public_header_files = 'GPUImage/Classes/GL/GLProgram.h'
 
     end
     
