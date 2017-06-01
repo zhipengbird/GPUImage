@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'zhipengbird' => 'yuanph@ushareit.com' }
     s.source           = { :git => 'https://github.com/zhipengbird/GPUImage.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-    
+
+
     s.ios.deployment_target = '7.0'
     s.frameworks = ['OpenGLES', 'CoreMedia', 'QuartzCore', 'AVFoundation']
     
@@ -63,37 +63,9 @@ Pod::Spec.new do |s|
         'GPUImage' => ['GPUImage/Assets/**/*.png']
         }
     end
-    
-#    s.subspec 'Color' do |co|
-#        co.dependency 'GPUImage/FilterCore'
-#        co.dependency 'GPUImage/Image'
-#
-#        co.public_header_files = 'GPUImage/Classes/Filter/Colors/**/*.{h}'
-#        co.source_files = 'GPUImage/Classes/Filter/Colors/*.{m,h}'
-#    end
-#    
-#    s.subspec 'Effect' do |ef|
-#        ef.dependency 'GPUImage/FilterCore'
-#        ef.dependency 'GPUImage/Image'
-#
-#        ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
-#        ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
-#    end
-#    s.subspec 'Image' do |im|
-#        im.dependency 'GPUImage/FilterCore'
-##        im.dependency 'GPUImage/Color'
-##        im.dependency 'GPUImage/Blends'
-#        im.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
-#        im.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
-#    end
 
-    
-    
      s.resource_bundles = {
        'GPUImage' => ['GPUImage/Assets/origin/*.png']
      }
-    
-    # s.public_header_files = 'Pod/Classes/**/*.h'
-    # s.frameworks = 'UIKit', 'MapKit'
-    # s.dependency 'AFNetworking', '~> 2.3'
+
 end
