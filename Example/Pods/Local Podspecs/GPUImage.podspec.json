@@ -1,6 +1,6 @@
 {
   "name": "GPUImage",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "summary": "A short description of GPUImage.",
   "requires_arc": true,
   "homepage": "http://www.ushareit.com",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/zhipengbird/GPUImage.git",
-    "tag": "0.2.5"
+    "tag": "0.2.7"
   },
   "platforms": {
     "ios": "7.0"
@@ -29,6 +29,11 @@
     "CLANG_MODULES_AUTOLINK": "YES"
   },
   "default_subspecs": "GL",
+  "resource_bundles": {
+    "GPUImage": [
+      "GPUImage/Assets/*.png"
+    ]
+  },
   "subspecs": [
     {
       "name": "GL",
@@ -46,63 +51,9 @@
       "source_files": "GPUImage/Classes/Core/Basic/**/*.{m,h}"
     },
     {
-      "name": "FilterCore",
-      "dependencies": {
-        "GPUImage/Basic": [
-
-        ]
-      },
-      "public_header_files": "GPUImage/Classes/Filter/Core/**/*.{h}",
-      "source_files": "GPUImage/Classes/Filter/Core/*.{m,h}"
-    },
-    {
-      "name": "Blend",
-      "dependencies": {
-        "GPUImage/FilterCore": [
-
-        ],
-        "GPUImage/Image": [
-
-        ]
-      },
-      "public_header_files": "GPUImage/Classes/Filter/Blends/**/*.{h}",
-      "source_files": "GPUImage/Classes/Filter/Blends/*.{m,h}"
-    },
-    {
-      "name": "Color",
-      "dependencies": {
-        "GPUImage/FilterCore": [
-
-        ],
-        "GPUImage/Image": [
-
-        ]
-      },
-      "public_header_files": "GPUImage/Classes/Filter/Colors/**/*.{h}",
-      "source_files": "GPUImage/Classes/Filter/Colors/*.{m,h}"
-    },
-    {
-      "name": "Effect",
-      "dependencies": {
-        "GPUImage/FilterCore": [
-
-        ],
-        "GPUImage/Image": [
-
-        ]
-      },
-      "public_header_files": "GPUImage/Classes/Filter/Effects/**/*.{h}",
-      "source_files": "GPUImage/Classes/Filter/Effects/*.{m,h}"
-    },
-    {
-      "name": "Image",
-      "dependencies": {
-        "GPUImage/FilterCore": [
-
-        ]
-      },
-      "public_header_files": "GPUImage/Classes/Filter/Images/**/*.{h}",
-      "source_files": "GPUImage/Classes/Filter/Images/*.{m,h}"
+      "name": "Filter",
+      "public_header_files": "GPUImage/Classes/Filter/{Images}/*.{h}",
+      "source_files": "GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{m,h}"
     }
   ]
 }
