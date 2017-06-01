@@ -1,12 +1,12 @@
 use_frameworks!
 
 target 'GPUImage_Example' do
-  pod 'GPUImage/Basic', :path => '../'
-  pod 'GPUImage/Color', :path => '../'
-pod 'GPUImage/Effect', :path => '../'
-pod 'GPUImage/Image', :path => '../'
-pod 'GPUImage/Blend', :path => '../'
-  target 'GPUImage_Tests' do
-    inherit! :search_paths
-  end
+    pod 'GPUImage/Basic', :path => '../'
+    pod 'GPUImage/Color', :path => '../'
+    pod 'GPUImage/Effect', :path => '../'
+    pod 'GPUImage/Image', :path => '../'
+    pod 'GPUImage/Blend', :path => '../'
+    target 'GPUImage_Tests' do
+        inherit! :search_paths
+    end
 end

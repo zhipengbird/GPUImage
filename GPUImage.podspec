@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'GPUImage'
-    s.version          = '0.2.3 '
+    s.version          = '0.2.4'
     s.summary          = 'A short description of GPUImage.'
     s.requires_arc = true
     
@@ -62,18 +62,18 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Color' do |co|
-        co.dependency 'GPUImage/Basic'
+        co.dependency 'GPUImage/FilterCore'
         co.public_header_files = 'GPUImage/Classes/Filter/Colors/**/*.{h}'
         co.source_files = 'GPUImage/Classes/Filter/Colors/*.{m,h}'
     end
     
     s.subspec 'Effect' do |ef|
-        ef.dependency 'GPUImage/Basic'
+        ef.dependency 'GPUImage/FilterCore'
         ef.public_header_files = 'GPUImage/Classes/Filter/Effects/**/*.{h}'
         ef.source_files = 'GPUImage/Classes/Filter/Effects/*.{m,h}'
     end
     s.subspec 'Image' do |ef|
-        ef.dependency 'GPUImage/Basic'
+        ef.dependency 'GPUImage/FilterCore'
         ef.public_header_files = 'GPUImage/Classes/Filter/Images/**/*.{h}'
         ef.source_files = 'GPUImage/Classes/Filter/Images/*.{m,h}'
     end
