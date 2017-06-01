@@ -63,18 +63,17 @@
     {
       "name": "CustomFilter",
       "dependencies": {
-        "GPUImage/Basic": [
+        "GPUImage/Filter": [
 
         ]
       },
       "public_header_files": "GPUImage/Classes/CustomFilter/*.{h}",
       "source_files": [
-        "GPUImage/Classes/CustomFilter/*.{m,h}",
-        "GPUImage/Classes/Filter/Core/*.{m,h}"
+        "GPUImage/Classes/CustomFilter/*.{m,h}"
       ],
       "resource_bundles": {
-        "GPUImageCs": [
-          "GPUImage/Assets/custom/*.png"
+        "GPUImage": [
+          "GPUImage/Assets/**/*.png"
         ]
       }
     }

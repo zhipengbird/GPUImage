@@ -56,11 +56,11 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'CustomFilter' do |cf|
-        cf.dependency 'GPUImage/Basic'
+        cf.dependency 'GPUImage/Filter'
         cf.public_header_files ='GPUImage/Classes/CustomFilter/*.{h}'
-        cf.source_files =['GPUImage/Classes/CustomFilter/*.{m,h}','GPUImage/Classes/Filter/Core/*.{m,h}']
+        cf.source_files =['GPUImage/Classes/CustomFilter/*.{m,h}']
         cf.resource_bundles ={
-        'GPUImageCs' => ['GPUImage/Assets/custom/*.png']
+        'GPUImage' => ['GPUImage/Assets/**/*.png']
         }
     end
     

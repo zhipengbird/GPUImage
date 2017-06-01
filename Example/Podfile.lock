@@ -2,6 +2,8 @@ PODS:
   - GPUImage/Basic (0.3.1):
     - GPUImage/GL
   - GPUImage/CustomFilter (0.3.1):
+    - GPUImage/Filter
+  - GPUImage/Filter (0.3.1):
     - GPUImage/Basic
   - GPUImage/GL (0.3.1)
 
@@ -13,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GPUImage: 3cafa313af0f4380b37c7c4c176b319474287dd7
+  GPUImage: 8eee9e1fab2c1176f8a247e3dd461c48e9b4d325
 
 PODFILE CHECKSUM: ffead549ec068db30063500fc7d674e656797df6
 

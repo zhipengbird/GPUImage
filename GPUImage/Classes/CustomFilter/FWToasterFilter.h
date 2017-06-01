@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ForrestWoo co,.ltd. All rights reserved.
 //
 
-#import "GPUImage.h"
+#import "GPUFilter.h"
 #import "FWSixInputFilter.h"
 
 @interface FWFilter15 : FWSixInputFilter

@@ -7,7 +7,7 @@
 //
 
 
-#import "GPUImage.h"
+#import "GPUFilter.h"
 #import "GPUImageFourInputFilter.h"
 @interface FWFilter5 : GPUImageFourInputFilter
 

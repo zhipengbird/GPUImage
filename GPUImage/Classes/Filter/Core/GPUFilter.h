@@ -9,6 +9,9 @@
 #ifndef GPUFilter_h
 #define GPUFilter_h
 
+#import "GPUImageBasic.h"
+
+
 //Core
 #import "GPUImage3x3TextureSamplingFilter.h"
 #import "GPUImageBuffer.h"

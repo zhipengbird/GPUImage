@@ -7,7 +7,7 @@
 //
 
 #import "GPUImageFilterGroup.h"
-#import "GPUImage.h"
+#import "GPUFilter.h"
 
 @interface FWFilter9 : GPUImageThreeInputFilter
 

@@ -8,7 +8,7 @@
 
 #import "GPUImageFilterGroup.h"
 #import "FWSixInputFilter.h"
-#import "GPUImage.h"
+#import "GPUFilter.h"
 @interface FWFilter17 : FWSixInputFilter
 
 @end
