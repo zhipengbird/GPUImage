@@ -1,6 +1,6 @@
 {
   "name": "GPUImage",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "summary": "A short description of GPUImage.",
   "requires_arc": true,
   "homepage": "http://www.ushareit.com",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/zhipengbird/GPUImage.git",
-    "tag": "0.3.0"
+    "tag": "0.3.1"
   },
   "platforms": {
     "ios": "7.0"
@@ -31,7 +31,7 @@
   "default_subspecs": "GL",
   "resource_bundles": {
     "GPUImage": [
-      "GPUImage/Assets/*.png"
+      "GPUImage/Assets/origin/*.png"
     ]
   },
   "subspecs": [
@@ -59,6 +59,24 @@
       },
       "public_header_files": "GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{h}",
       "source_files": "GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{m,h}"
+    },
+    {
+      "name": "CustomFilter",
+      "dependencies": {
+        "GPUImage/Basic": [
+
+        ]
+      },
+      "public_header_files": "GPUImage/Classes/CustomFilter/*.{h}",
+      "source_files": [
+        "GPUImage/Classes/CustomFilter/*.{m,h}",
+        "GPUImage/Classes/Filter/Core/*.{m,h}"
+      ],
+      "resource_bundles": {
+        "GPUImageCs": [
+          "GPUImage/Assets/custom/*.png"
+        ]
+      }
     }
   ]
 }

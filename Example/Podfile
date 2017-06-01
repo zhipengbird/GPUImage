@@ -2,8 +2,8 @@ use_frameworks!
 
 target 'GPUImage_Example' do
 #    pod 'GPUImage/Basic', :path => '../'
-    pod 'GPUImage/Filter', :path => '../'
-
+#    pod 'GPUImage/Filter', :path => '../'
+    pod 'GPUImage/CustomFilter' ,:path =>'../'
     target 'GPUImage_Tests' do
         inherit! :search_paths
     end

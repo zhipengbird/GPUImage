@@ -1,20 +1,20 @@
 PODS:
-  - GPUImage/Basic (0.3.0):
+  - GPUImage/Basic (0.3.1):
     - GPUImage/GL
-  - GPUImage/Filter (0.3.0):
+  - GPUImage/CustomFilter (0.3.1):
     - GPUImage/Basic
-  - GPUImage/GL (0.3.0)
+  - GPUImage/GL (0.3.1)
 
 DEPENDENCIES:
-  - GPUImage/Filter (from `../`)
+  - GPUImage/CustomFilter (from `../`)
 
 EXTERNAL SOURCES:
   GPUImage:
     :path: ../
 
 SPEC CHECKSUMS:
-  GPUImage: fe6dae655e211900441c63ec9a7c3d1d6efbac38
+  GPUImage: 3cafa313af0f4380b37c7c4c176b319474287dd7
 
-PODFILE CHECKSUM: 9f205c71154114c24df80799b0cf669791d355de
+PODFILE CHECKSUM: ffead549ec068db30063500fc7d674e656797df6
 
 COCOAPODS: 1.2.1

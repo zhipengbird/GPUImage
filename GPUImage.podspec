@@ -51,9 +51,17 @@ Pod::Spec.new do |s|
     
     s.subspec 'Filter' do |bl|
         bl.dependency 'GPUImage/Basic'
-#Core,Blends,Colors,Effects,Images
         bl.public_header_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{h}'
         bl.source_files = 'GPUImage/Classes/Filter/{Core,Blends,Colors,Effects,Images}/*.{m,h}'
+    end
+    
+    s.subspec 'CustomFilter' do |cf|
+        cf.dependency 'GPUImage/Basic'
+        cf.public_header_files ='GPUImage/Classes/CustomFilter/*.{h}'
+        cf.source_files =['GPUImage/Classes/CustomFilter/*.{m,h}','GPUImage/Classes/Filter/Core/*.{m,h}']
+        cf.resource_bundles ={
+        'GPUImageCs' => ['GPUImage/Assets/custom/*.png']
+        }
     end
     
 #    s.subspec 'Color' do |co|
@@ -82,7 +90,7 @@ Pod::Spec.new do |s|
     
     
      s.resource_bundles = {
-       'GPUImage' => ['GPUImage/Assets/*.png']
+       'GPUImage' => ['GPUImage/Assets/origin/*.png']
      }
     
     # s.public_header_files = 'Pod/Classes/**/*.h'
